@@ -1,0 +1,18 @@
+[package]
+name = "ragna-voice-cli"
+description = "Headless RAGNA Voice pipeline."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+hound = "3.5"
+ragna-voice-audio.workspace = true
+ragna-voice-core.workspace = true
+ragna-voice-transcribe.workspace = true
+
+[lints]
+workspace = true

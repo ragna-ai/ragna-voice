@@ -1,0 +1,10 @@
+/target
+.DS_Store
+
+# Downloaded Model binaries
+*.bin
+*.mlmodelc/
+
+# Agent tooling (local only)
+.claude/
+.agents/

@@ -1,0 +1,2 @@
+/* Shown by macOS when RAGNA Voice asks for the microphone. */
+"NSMicrophoneUsageDescription" = "Used only while you hold the dictation hotkey. Audio stays on your Mac and is discarded after transcription.";

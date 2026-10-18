@@ -1,0 +1,44 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "apps/*", "xtask"]
+exclude = ["vendor/whisper-rs-sys"]
+
+[workspace.package]
+version = "0.1.1"
+edition = "2024"
+rust-version = "1.99"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ragna-ai/ragna-voice"
+publish = false
+
+[workspace.dependencies]
+ragna-voice-core = { path = "crates/core" }
+ragna-voice-icon = { path = "crates/icon" }
+ragna-voice-audio = { path = "crates/audio" }
+ragna-voice-transcribe = { path = "crates/transcribe" }
+ragna-voice-models = { path = "crates/models" }
+ragna-voice-platform = { path = "crates/platform" }
+ragna-voice-ui-egui = { path = "crates/ui-egui" }
+
+eframe = { version = "0.36", default-features = false, features = ["accesskit", "default_fonts", "persistence", "wgpu"] }
+egui = "0.36"
+tray-icon = "0.26"
+winit = { version = "0.30", default-features = false }
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+
+# whisper-rs-sys 0.15.0 with whisper.cpp 1.9.5. See vendor/whisper-rs-sys/README.md.
+[patch.crates-io]
+whisper-rs-sys = { path = "vendor/whisper-rs-sys" }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "debuginfo"

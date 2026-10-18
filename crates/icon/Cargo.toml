@@ -1,0 +1,12 @@
+[package]
+name = "ragna-voice-icon"
+description = "The RAGNA Voice mark (a rounded square with an R), drawn in code."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true

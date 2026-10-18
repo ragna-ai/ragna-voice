@@ -1,0 +1,16 @@
+[package]
+name = "ragna-voice-transcribe"
+description = "whisper.cpp bridge: turns a Recording into a Transcript."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+ragna-voice-core.workspace = true
+whisper-rs = { version = "0.16", features = ["log_backend", "metal"] }
+
+[lints]
+workspace = true

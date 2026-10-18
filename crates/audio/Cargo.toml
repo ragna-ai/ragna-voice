@@ -1,0 +1,17 @@
+[package]
+name = "ragna-voice-audio"
+description = "Microphone capture into an in-RAM Recording."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+cpal = "0.18"
+ragna-voice-core.workspace = true
+rubato = "5"
+
+[lints]
+workspace = true

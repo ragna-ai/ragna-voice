@@ -1,0 +1,20 @@
+[package]
+name = "ragna-voice-ui-egui"
+description = "egui views: Settings, first-run wizard, waveform overlay."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+ragna-voice-core.workspace = true
+egui.workspace = true
+ragna-voice-platform.workspace = true
+ragna-voice-models.workspace = true
+ragna-voice-icon.workspace = true
+egui_extras = { version = "0.36", default-features = false, features = ["svg"] }
+
+[lints]
+workspace = true
